@@ -1,0 +1,26 @@
+Run: C_100.0_gamma_10
+Random seed: 470
+Classifier type: sklearn.svm.SVC
+Specified classifier params:
+{ 'C': 100.0,
+  'gamma': 10,
+  'kernel': 'rbf',
+  'random_state': 470}
+Classification report:
+              precision    recall  f1-score   support
+
+           0      0.000     0.000     0.000        35
+           1      0.000     0.000     0.000        36
+           2      0.000     0.000     0.000        35
+           3      0.103     1.000     0.186        37
+           4      0.000     0.000     0.000        37
+           5      0.000     0.000     0.000        37
+           6      0.000     0.000     0.000        37
+           7      0.000     0.000     0.000        36
+           8      0.000     0.000     0.000        33
+           9      0.000     0.000     0.000        37
+
+    accuracy                          0.103       360
+   macro avg      0.010     0.100     0.019       360
+weighted avg      0.011     0.103     0.019       360
+
