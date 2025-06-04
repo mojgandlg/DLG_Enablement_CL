@@ -26,15 +26,19 @@ else:
     
 # Define hyperparameters for RandomForestRegressor
 n_estimators = 100
-max_depth = 6
+max_depth = 4
 max_features = 3
 
 
 # Enable auto-logging
 mlflow.autolog()
 
+
 # Start the run with the custom run name
-with mlflow.start_run(experiment_id=experiment_id):
+with mlflow.start_run(experiment_id=experiment_id, run_name='Mojgan'):
+    mlflow.set_tag("team", "Commercial")
+    mlflow.set_tag("experiment_type", "check_name")
+    
     db = load_diabetes()
     X_train, X_test, y_train, y_test = train_test_split(db.data, db.target)
     rf = RandomForestRegressor(n_estimators=n_estimators, max_depth=max_depth, max_features=max_features)
